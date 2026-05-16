@@ -14,6 +14,11 @@ from pathlib import Path
 app = FastAPI(title="Mergington High School API",
               description="API for viewing and signing up for extracurricular activities")
 
+# Feature flags (from user input)
+# The following flag corresponds to: inlineChat.enableV2
+inlineChat_enableV2 = True
+inlineChat_enableV2 = True
+
 # Mount the static files directory
 current_dir = Path(__file__).parent
 app.mount("/static", StaticFiles(directory=os.path.join(Path(__file__).parent,

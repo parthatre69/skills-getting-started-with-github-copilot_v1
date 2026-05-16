@@ -8,37 +8,54 @@
   </head>
   <body>
     <header>
-      <h1>Mergington High School</h1>
-      <h2>Extracurricular Activities</h2>
+      <div class="brand">
+        <img class="brand-logo" src="https://api.dicebear.com/6.x/miniavs/svg?seed=Mergington%20High" alt="Mergington logo" />
+        <div>
+          <h1>Mergington High School</h1>
+          <h2>Extracurricular Activities</h2>
+          <div class="tagline">Explore clubs, classes, and activities — find your community</div>
+        </div>
+      </div>
     </header>
 
-    <main>
-      <section id="activities-container">
-        <h3>Available Activities</h3>
-        <div id="activities-list">
+    <main class="layout">
+      <section id="activities-container" class="activities-section">
+        <div class="section-header">
+          <h3>Available Activities</h3>
+          <input id="search" type="search" placeholder="Search activities..." aria-label="Search activities" />
+        </div>
+        <div id="activities-list" class="activities-grid">
           <!-- Activities will be loaded here -->
           <p>Loading activities...</p>
         </div>
       </section>
 
-      <section id="signup-container">
-        <h3>Sign Up for an Activity</h3>
+      <aside id="signup-container" class="signup-panel">
+        <div class="section-header">
+          <h3>Sign Up</h3>
+        </div>
+
+        <div id="selected-activity" class="selected-activity empty">
+          <p>Select an activity to view details and sign up.</p>
+        </div>
+
         <form id="signup-form">
           <div class="form-group">
-            <label for="email">Student Email:</label>
+            <label for="email">Student Email</label>
             <input type="email" id="email" required placeholder="your-email@mergington.edu" />
           </div>
           <div class="form-group">
-            <label for="activity">Select Activity:</label>
+            <label for="activity">Activity</label>
             <select id="activity" required>
               <option value="">-- Select an activity --</option>
               <!-- Activity options will be loaded here -->
             </select>
           </div>
-          <button type="submit">Sign Up</button>
+          <button type="submit" class="primary">Sign Up</button>
         </form>
-        <div id="message" class="hidden"></div>
-      </section>
+
+        <div id="message" class="message hidden"></div>
+      </aside>
     </main>
 
     <footer>
